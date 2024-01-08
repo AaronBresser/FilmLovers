@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>FilmLovers - Películas y series</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,24 +17,25 @@
   <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
   {% if user.is_authenticated %}
-    <li><a href="{% url 'profile' user.username %}">Mi perfil</a></li>
-    <li><a href="{% url 'change-password' %}">Cambiar contraseña</a></li>
+    <li><a href="{% url 'profile' user.username %}" class="orange-text">Mi perfil</a></li>
+    <li><a href="{% url 'change-password' %}" class="orange-text">Cambiar contraseña</a></li>
     <li class="divider"></li>
-    <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li><a href="{% url 'logout' %}" class="black-text">Cerrar sesión</a></li>
   {% endif %}
 </ul>
 <nav class="black">
   <div class="nav-wrapper">
-    <a href="{% url 'index' %}" class="brand-logo">Logo</a>
+    <a href="{% url 'index' %}" class="brand-logo orange-text">FilmLovers</a>
     <ul class="right hide-on-med-and-down">
       <!-- Dropdown Trigger -->
 
-      <li><a href="#!"><i class="material-icons left">search</i>Buscar</a></li>
     {% if user.is_authenticated %}
       <li><a class="dropdown-trigger orange-text" href="#!" data-target="dropdown1">{{ user.username }}<i class="material-icons right">arrow_drop_down</i></a></li>
     
     {% else %}
-      <li><a href="{% url 'login' %}">Please sign in</a></li>
+      <li><a class="orange-text" href="{% url 'login' %}">Iniciar sesión</a></li>
     {% endif %}
 
     </ul>
@@ -53,7 +54,7 @@
     </div>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer black">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -101,6 +102,10 @@
 
 <script>
   $(document).ready(function(){
-      $(".dropdown-trigger").dropdown();
+    $('.dropdown-trigger').dropdown();
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: true
+    });
   });
 </script>

@@ -59,8 +59,8 @@
                <ul class="collection">
 
                   <li class="collection-item avatar">
-                    <span class="title">Rated</span>
-                    <p><b>{{ reviews_avg.rate__avg }}</b> by <b>{{ reviews_count }}</b> people </p>
+                    <span class="title">Valorada</span>
+                    <p><b>{{ reviews_avg.rate__avg }}</b> por <b>{{ reviews_count }}</b> personas </p>
                   </li>
 
 
@@ -120,10 +120,12 @@
                 <p>imdb ID: <b>{{ movie_data.imdbID }}</b></p>
                 <p>Production: <b>{{ movie_data.Production }}</b></p>
 
+              {% if user.is_authenticated %}
                 <br>
-                <a href="{% url 'rate-movie' movie_data.imdbID %}" class="waves-effect waves-light btn"><i class="material-icons left">Star</i>Rate</a>
-                <a href="{% url 'add-movies-to-watch' movie_data.imdbID %}" class="waves-effect waves-light btn"><i class="material-icons left">playlist_add</i>Watchlist</a>
-                <a href="{% url 'add-movies-watched' movie_data.imdbID %}" class="waves-effect waves-light btn"><i class="material-icons left">playlist_add_checked</i>Watched</a>
+                <a href="{% url 'rate-movie' movie_data.imdbID %}" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">Star</i>Valorar</a>
+                <a href="{% url 'add-movies-to-watch' movie_data.imdbID %}" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">playlist_add</i>Agregar a mi lista</a>
+                <a href="{% url 'add-movies-watched' movie_data.imdbID %}" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">playlist_add_checked</i>Ya la he visto</a>
+              {% endif %}
                
             </div>
           </div>
@@ -132,7 +134,7 @@
 
       </div>
 
-      <h4>Reviews</h4>
+      <h4>Valoraciones</h4>
       <div class="divider"></div>
 
 

@@ -75,16 +75,16 @@ class Movie(models.Model):
         return super().save(*args, **kwargs)
     
 RATE_CHOICES = [
-	(1, '1 - Trash'),
+	(1, '1 - Basura'),
 	(2, '2 - Horrible'),
-	(3, '3 - Terrible'),
-	(4, '4 - Bad'),
-	(5, '5 - OK'),
-	(6, '6 - Watchable'),
-	(7, '7 - Good'),
-	(8, '8 - Very Good'),
-	(9, '9 - Perfect'),
-	(10, '10 - Master Piece'), 
+	(3, '3 - Muy mala'),
+	(4, '4 - Mala'),
+	(5, '5 - Ok'),
+	(6, '6 - Aceptable'),
+	(7, '7 - Buena'),
+	(8, '8 - Muy buena'),
+	(9, '9 - Perfecta'),
+	(10, '10 - Obra maestra'), 
 ]
 
 class Review(models.Model):

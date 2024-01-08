@@ -7,11 +7,11 @@
 <div class="row center-align">
 	<form method="post" enctype="multipart/form-data" class="col s12" role="form" action="">
 	{% csrf_token %}
-	<h3>Edit Profile</h3>
+	<h3>Editar perfil</h3>
 	<div class="row">
 		<div class="file-field input-field col s12">
-		<div class="btn">
-			<span>File</span>
+		<div class="btn black orange-text">
+			<span>Actualizar foto</span>
 			{{ form.picture }}	
 		</div>
       <div class="file-path-wrapper">
@@ -23,20 +23,20 @@
 		<div class="input-field col s6">
 		<i class="material-icons prefix">account_circle</i>
 			{{ form.first_name }}	
-		<label for="first_name">First name</label>		
+		<label for="first_name">Nombre</label>		
 		</div>
 	</div>
 	<div class="row">
 		<div class="input-field col s6">
 		<i class="material-icons prefix">account_circle</i>
 			{{ form.last_name }}	
-		<label for="last_name">Last name</label>		
+		<label for="last_name">Apellido</label>		
 		</div>
 	</div>
 	<div class="row">
 		<div class="input-field col s12">
 			{{ form.location }}	
-		<label for="location">Location</label>		
+		<label for="location">Ubicación</label>		
 		</div>
 	</div>
 	<div class="row">
@@ -48,7 +48,7 @@
 	<div class="row">
 		<div class="input-field col s12">
 			{{ form.profile_info }}	
-		<label for="profile_info">About</label>		
+		<label for="profile_info">Sobre mi</label>		
 		</div>
 	</div>
 
@@ -60,7 +60,7 @@
 		</div>	
 	</div>
 	{% endif %}
-	<button type="submit" name="action" class="waves-effect waves-light btn"><i class="material-icons left">send</i>Update</button>
+	<button type="submit" name="action" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">send</i>Actualizar</button>
 	</form>
 
 </div>
