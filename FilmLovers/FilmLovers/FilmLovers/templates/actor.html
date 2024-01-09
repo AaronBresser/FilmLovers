@@ -10,7 +10,7 @@
             <div class="card-image">
               <img src="{% static 'img/icons/actor_2.jpg' %}">
               <img id="img-custom-circle-actor" src="{% static 'img/antje.jpg' %}">
-              <span style="font-size: 30px" class="card-title"><b>{{ actor }}</b></span>
+              <span style="font-size: 30px" class="card-title orange-text"><b>{{ actor }}</b></span>
             </div>
         </div>
       </div>
@@ -22,12 +22,12 @@
 
 
         {% for movie in movie_data %}
-          <div class="col s12 m4">
+          <div class="col s12 m3">
             <div class="card">
               <div class="card-image">
-                <a href="{% url 'movie-details' movie.imdbID%}"><img src="{{ movie.Poster.url }}"></a>
+                <a href="{% url 'movie-details' movie.imdbID%}"><img src="{{ movie.Poster.url }}" style="height: 30rem;"></a>
               </div>
-              <div class="card-content">
+              <div class="card-content" style="height: 13rem;">
                 <span class="card-title"><b>{{ movie.Title }}</b></span>
                 <span class="right"><i class="material-icons">date_range</i>{{ movie.Year }}</span>
                 <p><b>{{ movie.Type }}</b></p>

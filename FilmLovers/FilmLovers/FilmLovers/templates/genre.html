@@ -24,7 +24,7 @@
           <div class="col s12 m3">
             <div class="card">
               <div class="card-image">
-                <a href="{% url 'movie-details' movie.imdbID%}"><img style="height: 30rem;" src="{{ movie.Poster.url }}"></a>
+                <a href="{% if movie.imdbID %} {% url 'movie-details' movie.imdbID %} {% endif %}"><img style="height: 30rem;" src="{{ movie.Poster.url }}"></a>
               </div>
               <div class="card-content" style="height: 13rem;">
                 <span class="card-title"><b>{{ movie.Title }}</b></span>
