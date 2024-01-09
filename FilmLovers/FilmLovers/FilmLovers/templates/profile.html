@@ -126,11 +126,11 @@
 
 
       {% if movie_data.has_previous %}
-        <a href="?page={{ movie_data.previous_page_number }}" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Atrás</a>
+        <a href="?page={{ movie_data.previous_page_number }}" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">arrow_back</i>Atrás</a>
       {% endif %}
 
       {% if movie_data.has_next %}
-      <a href="?page={{ movie_data.next_page_number }}" class="waves-effect waves-light btn"><i class="material-icons left">arrow_forward</i>Siguiente</a>
+      <a href="?page={{ movie_data.next_page_number }}" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">arrow_forward</i>Siguiente</a>
       {% endif %}
 
 {% endif %}
