@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block banner %}
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <h1 class="header center orange-text text-lighten-2" style="color: #00897b; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Encuentra tu película favorita</h1>
+		<div class="row">
+			<div class="carousel carousel-slider" style="max-height: 25rem;">
+				<!-- https://dummyimage.com/600x200/000/fff -->
+				<a class="carousel-item" href="#one!"><img style="height: 25rem;" src="https://images.pexels.com/photos/3067112/pexels-photo-3067112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></a>
+				<a class="carousel-item" href="#two!"><img style="height: 25rem;" src="https://images.pexels.com/photos/2398356/pexels-photo-2398356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></a>
+				<a class="carousel-item" href="#three!"><img style="height: 25rem;" src="https://images.pexels.com/photos/10599804/pexels-photo-10599804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></a>
+				<a class="carousel-item" href="#four!"><img style="height: 25rem;" src="https://images.pexels.com/photos/12491688/pexels-photo-12491688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></a>
+			</div>
+		</div>
+          <div class="row">
+            <form class="col s12 m12">
+              <div class="row">
+                <div class="input-field col s12 m12">
+                  <textarea type="submit" id="textarea1" name="q" value="{{ request.GET.q }}" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Buscar</label>
+                </div>
+                <button type="submit" name="action" class="waves-effect waves-light btn black orange-text"><i class="material-icons left">search</i>Buscar</button>
+              </div>
+            </form>
+          </div>
+        <div class="row center">
+        </div>
+        <br><br>        
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block content %}
+  
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">movie</i></h2>
+            <h5 class="center">Encuentra tu película favorita</h5>
+
+            <p class="light">Explora el mundo del cine de una manera sencilla. Con casi todas las películas del catálogo, podrás ver detalles y valoraciones de tus películas favoritas, junto con una comunidad de amantes del cine!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">library_add</i></h2>
+            <h5 class="center">Crea una lista</h5>
+
+            <p class="light">Puedes crear listas de películas que desees ver o que tengas pendientes. Esto es una manera fácil de no olvidarte y hacer un seguimiento! Desde tu perfil podrás comprobar las películas que se encuentran en tu lista.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">rate_review</i></h2>
+            <h5 class="center">Valora tus películas favoritas</h5>
+
+            <p class="light">Puedes valorar tus películas favoritas, con una puntuación numérica y una opinión sobre ella. Las reseñas saldrán en tu perfil y la gente podrá comentarlas y darles a like!</p>
+          </div>
+        </div>
+      </div>
+
+  {% endblock %}
